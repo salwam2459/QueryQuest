@@ -12,7 +12,6 @@
 using namespace std;
 
 string cleanToken(const string& token) {
-  // TODO student
   string cleaned;
   bool hasLetter = false;
 
@@ -52,7 +51,6 @@ set<string> gatherTokens(const string& text) {
 }
 
 int buildIndex(const string& filename, map<string, set<string>>& index) {
-  // TODO student
   ifstream file(filename);
   if (!file.is_open()) {
       return 0;
@@ -76,7 +74,6 @@ int buildIndex(const string& filename, map<string, set<string>>& index) {
 
 set<string> findQueryMatches(const map<string, set<string>>& index,
                              const string& sentence) {
-  // TODO student
   istringstream iss(sentence);
   string term;
   set<string> result;
@@ -123,7 +120,6 @@ set<string> findQueryMatches(const map<string, set<string>>& index,
 }
 
 void searchEngine(const string& filename) {
-  // TODO student
   map<string, set<string>> index;
   int numPages = buildIndex(filename, index);
   if (numPages == 0) {
